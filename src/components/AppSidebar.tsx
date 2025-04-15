@@ -1,5 +1,5 @@
 
-import { Flask, Home, BellRing, TestTubes, Building2, CalendarDays } from "lucide-react";
+import { Beaker, Home, BellRing, TestTubes, Building2, CalendarDays } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -13,7 +13,7 @@ import {
 
 const menuItems = [
   { title: "Tableau de bord", icon: Home, url: "/" },
-  { title: "Produits", icon: Flask, url: "/products" },
+  { title: "Produits", icon: Beaker, url: "/products" },
   { title: "Tests", icon: TestTubes, url: "/tests" },
   { title: "Laboratoires", icon: Building2, url: "/labs" },
   { title: "Planning", icon: CalendarDays, url: "/planning" },
