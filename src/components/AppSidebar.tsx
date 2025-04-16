@@ -16,7 +16,7 @@ const menuItems = [
   { title: "Produits", icon: Beaker, url: "/products" },
   { title: "Tests", icon: TestTubes, url: "/tests" },
   { title: "Laboratoires", icon: Building2, url: "/labs" },
-  { title: "Planning", icon: CalendarDays, url: "/planning" },
+  { title: "Planning", icon: CalendarDays, url: "/test-calendar" },
   { title: "Notifications", icon: BellRing, url: "/notifications" },
 ];
 

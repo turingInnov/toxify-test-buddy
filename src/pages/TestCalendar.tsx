@@ -1,9 +1,10 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Layout } from "@/components/Layout";
 import { TestSchedulingCalendar } from "@/components/tests/TestSchedulingCalendar";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { TestsList } from "@/components/tests/TestsList";
 
 export default function TestCalendar() {
   const [activeView, setActiveView] = useState<"calendar" | "list">("calendar");
@@ -28,9 +29,7 @@ export default function TestCalendar() {
               <TestSchedulingCalendar />
             </TabsContent>
             <TabsContent value="list">
-              <div className="text-center p-4 text-muted-foreground">
-                La vue liste sera implémentée prochainement.
-              </div>
+              <TestsList />
             </TabsContent>
           </Tabs>
         </Card>
