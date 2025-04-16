@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Beaker, Calendar, Tag, X } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface Product {
   id: number;
@@ -18,12 +19,20 @@ interface ProductDetailsProps {
 }
 
 export function ProductDetails({ product, onClose }: ProductDetailsProps) {
+  const navigate = useNavigate();
+  
   // Format the date
   const formattedDate = new Date(product.dateAdded).toLocaleDateString('fr-FR', {
     day: 'numeric',
     month: 'long',
     year: 'numeric'
   });
+
+  // Function to handle navigation to test calendar
+  const handleScheduleTest = () => {
+    onClose();
+    navigate("/test-calendar");
+  };
 
   return (
     <div className="space-y-4">
@@ -70,6 +79,10 @@ export function ProductDetails({ product, onClose }: ProductDetailsProps) {
       
       <div className="flex justify-end gap-2 pt-2">
         <Button variant="outline" onClick={onClose}>Fermer</Button>
+        <Button variant="secondary" onClick={handleScheduleTest}>
+          <Calendar className="h-4 w-4 mr-2" />
+          Planifier un test
+        </Button>
         <Button>Modifier</Button>
       </div>
     </div>
